@@ -1,19 +1,19 @@
-﻿using System;
-
-namespace DatabaseConnection
+﻿namespace DatabaseConnection
 {
-    public class Circle : DbConnection
-    {
-        public override Draw()
-        {
-            // Changed implementation
-        }
-    }
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var oracle = new OracleConnection("go");
+            oracle.Open();
+            
+
+            var sql = new SqlConnection("go");
+            sql.Open();
+            sql.Close();
+
+
+           
         }
     }
 }
